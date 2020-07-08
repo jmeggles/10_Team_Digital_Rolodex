@@ -5,9 +5,9 @@ const inquirer = require("inquirer");
 // const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-//  team.html will be inside output folder
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+// const OUTPUT_DIR = path.resolve(__dirname, "output");
+// //  team.html will be insIde output folder
+// const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 // 
 const render = require("./lib/htmlRenderer");
@@ -17,47 +17,50 @@ const render = require("./lib/htmlRenderer");
 
 //     const HTML = render(teamArray);
 
-//     fs.
+//     fs.re
 
+const teamMembers = []
 
+function createTeam() {
 
-
-
-
-inquirer
+  inquirer
     .prompt([
-        {
-            type: "list",
-            name: "title",
-            message: "What is your job title?",
-            choices: [
-                "Manager",
-                "Engineer",
-                "Intern"
-            ]
-            validate: async (input)=> {    
-            if (input===Manager) {
-                
-                }
-            }
-        }
-       // use switch case here
-  switch (path) {
+      // list of choices for user to choose from.  
+      {
+        type: "list",
+        name: "memberChoice",
+        message: "Title of team member?",
+        choices: [
+          "Manager",
+          "Engineer",
+          "Intern",
+        ]
+      }
 
-    case "/":
-      return displayRoot(res);
-  
-    case "/portfolio":
-      return displayPortfolio(res);
-  
-    default:
-      return display404(path, res);
-    }
-  }
-       }
-        } 
-    } 
     ])
+    // depending on which title is chosen, the next set of required info will be asked.
+    .then(userChoice => {
+      switch (userChoice.memberChoice) {
+        case "Manager":
+          addManager();
+
+        case "Engineer":
+          addEngineer();
+
+        case "Intern":
+          addIntern();
+      }
+    })
+
+        // valIdate: async (input)=> {    
+          //             if (input===Manager) {
+
+          //                 }
+          //             }
+          //         }
+
+
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -83,4 +86,4 @@ inquirer
 // and Intern classes should all extend from a class named Employee; see the directions
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
+// for the provIded `render` function to work! ```

@@ -2,7 +2,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-const path = require("path");
+// const path = require("path");
 const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
@@ -19,6 +19,23 @@ const render = require("./lib/htmlRenderer");
 
 //     fs.
 
+class JobTitle {
+    constructor(Manager, Engineer, Intern) {
+      if (!Manager) {
+        throw new Error("You are missing the name.");
+      }
+      if (!Enginer) {
+        throw new Error("You are missing the strength.");
+      }
+      if (!Intern) {
+        throw new Error("You are missing the hitPoints.");
+      }
+      this.Manager = Manager;
+      this.Engineer = Engineer;
+      this.Intern = Intern;
+
+
+
 
 inquirer
     .prompt([
@@ -31,8 +48,17 @@ inquirer
                 "Engineer",
                 "Intern"
             ]
-        }   
+            validate: async (input)=> {    
+            if (input===Manager) {
+                
+                }
+            }
+        }
+       
+        } 
+    } 
     ])
+
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
     // refer to class or subclass, an object needs to be created

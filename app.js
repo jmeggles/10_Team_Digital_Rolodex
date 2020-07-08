@@ -22,7 +22,7 @@ const render = require("./lib/htmlRenderer");
 const teamMembers = []
 
 function createTeam() {
-
+// initial prompt for user to select so the system knows what questions to prompt after this.
   inquirer
     .prompt([
       // list of choices for user to choose from.  
@@ -41,12 +41,13 @@ function createTeam() {
     // depending on which title is chosen, the next set of required info will be asked.
     .then(userChoice => {
       switch (userChoice.memberChoice) {
+        // if manager is selected...or...
         case "Manager":
           addManager();
-
+        // if engineer is selected...or...
         case "Engineer":
           addEngineer();
-
+        // if intern is selected.
         case "Intern":
           addIntern();
       }

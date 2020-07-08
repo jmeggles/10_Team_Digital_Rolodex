@@ -137,25 +137,8 @@ function createCard() {
           message: "Intern's school?"
         }
     ])
-  
 
 
-        // valIdate: async (input)=> {    
-          //             if (input===Manager) {
-
-          //                 }
-          //             }
-          //         }
-
-
-
-
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
-    // refer to class or subclass, an object needs to be created
-
-// After the user has input all employees desired, call the `render` function (required
-// above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
     //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file
 

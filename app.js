@@ -83,6 +83,8 @@ function createTeam() {
       name: "phone",
       message: "Manager's office number?"
     }
+
+    // if engineer is selected...
   inquirer
     .prompt([
     {
@@ -105,6 +107,8 @@ function createTeam() {
       name: "github",
       message: "Engineer's github?"
     }
+    
+    // if intern is selected...
   inquirer
     .prompt([
     {

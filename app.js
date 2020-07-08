@@ -17,20 +17,20 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 // getting an array of all inputted employee information
 const employees = [];
-// 
+// send employee array to html output 
 const HTML = render(employees);
 
 
 // writes the info to an output html page
-fs.writeFile(outputPath, HTML, (err) =>{
+fs.writeFile(outputPath, HTML, (err) => {
   console.log("File generated");
-} )
+})
 
 // building the team with objects as classes/subclasses
-function createTeam() {
-     
+function createCard() {
+
   // list of choices for user to choose from.  
-    inquirer
+  inquirer
     .prompt([
       {
         type: "list",
@@ -50,91 +50,96 @@ function createTeam() {
       switch (selection.title) {
         // if manager is selected...or...
         case "Manager":
-          addManager();
+          mgrCard();
         // if engineer is selected...or...
         case "Engineer":
-          addEngineer();
+          engCard();
         // if intern is selected.
         case "Intern":
-          addIntern();
+          intCard();
       }
     })
-    
-  // if manager is selected... 
-  inquirer
-    .prompt([
-    {
-        type: "input",
-        name: "name",
-        message: "Manager's name?"
-    },
-    {
-        type: "input",
-        name: "id",
-        message: "Manager's employee Id?"
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "Manager's email?"
-    },
-    {
-      type: "input",
-      name: "phone",
-      message: "Manager's office number?"
-    }
 
-    // if engineer is selected...
-  inquirer
-    .prompt([
-    {
-        type: "input",
-        name: "name",
-        message: "Engineer's name?"
-    },
-    {
-        type: "input",
-        name: "id",
-        message: "Enginner's employee Id?"
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "Engineer's email?"
-    },
-    {
-      type: "input",
-      name: "github",
-      message: "Engineer's github?"
-    }
-    
-    // if intern is selected...
-  inquirer
-    .prompt([
-    {
-        type: "input",
-        name: "name",
-        message: "Intern's name?"
-    },
-    {
-        type: "input",
-        name: "id",
-        message: "Intern's employee Id?"
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "Intern's email?"
-    },
-    {
-      type: "input",
-      name: "school",
-      message: "Intern's school?"
-    }
- 
-        
+  // if manager is selected... 
+  function mgrCard() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "mgrName",
+          message: "Manager's name?"
+        },
+        {
+          type: "input",
+          name: "mgrId",
+          message: "Manager's employee Id?"
+        },
+        {
+          type: "input",
+          name: "mgrEmail",
+          message: "Manager's email?"
+        },
+        {
+          type: "input",
+          name: "mgrPhone",
+          message: "Manager's office number?"
+        }
+      ])
+
+  // if engineer is selected...
+  function engCard() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "engName",
+          message: "Engineer's name?"
+        },
+        {
+          type: "input",
+          name: "engId",
+          message: "Enginner's employee Id?"
+        },
+        {
+          type: "input",
+          name: "engEmail",
+          message: "Engineer's email?"
+        },
+        {
+          type: "input",
+          name: "engGithub",
+          message: "Engineer's github username?"
+        }
+    ])
+
+  // if intern is selected...
+  function intCard() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "intName",
+          message: "Intern's name?"
+        },
+        {
+          type: "input",
+          name: "intId",
+          message: "Intern's employee Id?"
+        },
+        {
+          type: "input",
+          name: "intEmail",
+          message: "Intern's email?"
+        },
+        {
+          type: "input",
+          name: "intSchool",
+          message: "Intern's school?"
+        }
+    ])
   
-        
+
+
         // valIdate: async (input)=> {    
           //             if (input===Manager) {
 

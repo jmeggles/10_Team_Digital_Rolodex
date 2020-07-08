@@ -28,87 +28,90 @@ fs.writeFile(outputPath, HTML, (err) =>{
 
 // building the team with objects as classes/subclasses
 function createTeam() {
+     
+  // list of choices for user to choose from.  
+    inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "title",
+        message: "Title of team member?",
+        choices: [
+          "Manager",
+          "Engineer",
+          "Intern",
+          "No more members."
+        ]
+      }
+    ])
 
+    // depending on which title is chosen, the next set of required info will be asked.
+    .then(selection => {
+      switch (selection.title) {
+        // if manager is selected...or...
+        case "Manager":
+          addManager();
+        // if engineer is selected...or...
+        case "Engineer":
+          addEngineer();
+        // if intern is selected.
+        case "Intern":
+          addIntern();
+      }
+    })
+    
+  // if manager is selected... 
   inquirer
-  .prompt([
-    // list of choices for user to choose from.  
+    .prompt([
     {
-      type: "list",
-      name: "title",
-      message: "Title of team member?",
-      choices: [
-        "Manager",
-        "Engineer",
-        "Intern",
-      ]
+        type: "input",
+        name: "name",
+        message: "Manager's name?"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Manager's employee Id?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Manager's email?"
+    },
+    {
+      type: "input",
+      name: "phone",
+      message: "Manager's office number?"
     }
-  ])
-  // depending on which title is chosen, the next set of required info will be asked.
-  .then(selection => {
-    switch (selection.title) {
-      // if manager is selected...or...
-      case "Manager":
-        addManager();
-      // if engineer is selected...or...
-      case "Engineer":
-        addEngineer();
-      // if intern is selected.
-      case "Intern":
-        addIntern();
-    }
-  })
-// if manager is selected... 
-inquirer
-  .prompt([
-  {
-      type: "input",
-      name: "name",
-      message: "Manager's name?"
-  },
-  {
-      type: "input",
-      name: "id",
-      message: "Manager's employee Id?"
-  },
-  {
-      type: "input",
-      name: "email",
-      message: "Manager's email?"
-  },
-  {
-    type: "input",
-    name: "phone",
-    message: "Manager's office number?"
-  }
+ 
+        
+  
+        
+        // valIdate: async (input)=> {    
+          //             if (input===Manager) {
 
-      
-
-      
-      // valIdate: async (input)=> {    
-        //             if (input===Manager) {
-
-        //                 }
-        //             }
-        //         }
+          //                 }
+          //             }
+          //         }
 
 
 
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-  // refer to class or subclass, an object needs to be created
+    // refer to class or subclass, an object needs to be created
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-  //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file
+    //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
-  //  
+    //  
 
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on

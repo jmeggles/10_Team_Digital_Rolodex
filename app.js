@@ -19,7 +19,8 @@ const render = require("./lib/htmlRenderer");
 
 //     fs.re
 
-const teamMembers = []
+// used employee keyword that was in render html.
+const employees = []
 
 function createTeam() {
 // initial prompt for user to select so the system knows what questions to prompt after this.
@@ -52,7 +53,33 @@ function createTeam() {
           addIntern();
       }
     })
-
+  // if manager is selected... 
+  inquirer
+    .prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "Manager's name?"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Manager's employee Id?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Manager's email?"
+    },
+    {
+      type: "input",
+      name: "phone",
+      message: "Manager's office number?"
+    }
+ 
+        
+  
+        
         // valIdate: async (input)=> {    
           //             if (input===Manager) {
 

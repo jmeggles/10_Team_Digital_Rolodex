@@ -28,7 +28,7 @@ function createTeam() {
       // list of choices for user to choose from.  
       {
         type: "list",
-        name: "memberChoice",
+        name: "title",
         message: "Title of team member?",
         choices: [
           "Manager",
@@ -39,8 +39,8 @@ function createTeam() {
 
     ])
     // depending on which title is chosen, the next set of required info will be asked.
-    .then(userChoice => {
-      switch (userChoice.memberChoice) {
+    .then(selection => {
+      switch (selection.title) {
         // if manager is selected...or...
         case "Manager":
           addManager();

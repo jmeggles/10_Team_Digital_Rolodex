@@ -12,14 +12,27 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 // 
 const render = require("./lib/htmlRenderer");
 
-// when done with objet in array, call the function
-    const teamarray = [];
+// // when done with objet in array, call the function
+//     const teamArray = [];
 
-    const HTML = render(teamarray);
+//     const HTML = render(teamArray);
 
-    fs.
+//     fs.
 
 
+inquirer
+    .prompt([
+        {
+            type: "list",
+            name: "title",
+            message: "What is your job title?",
+            choices: [
+                "Manager",
+                "Engineer",
+                "Intern"
+            ]
+        }   
+    ])
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
     // refer to class or subclass, an object needs to be created

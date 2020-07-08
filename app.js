@@ -83,6 +83,50 @@ function createTeam() {
       name: "phone",
       message: "Manager's office number?"
     }
+  inquirer
+    .prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "Engineer's name?"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Enginner's employee Id?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Engineer's email?"
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "Engineer's github?"
+    }
+  inquirer
+    .prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "Intern's name?"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Intern's employee Id?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Intern's email?"
+    },
+    {
+      type: "input",
+      name: "school",
+      message: "Intern's school?"
+    }
  
         
   

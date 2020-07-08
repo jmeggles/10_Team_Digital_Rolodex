@@ -19,20 +19,7 @@ const render = require("./lib/htmlRenderer");
 
 //     fs.
 
-class JobTitle {
-    constructor(Manager, Engineer, Intern) {
-      if (!Manager) {
-        throw new Error("You are missing the name.");
-      }
-      if (!Enginer) {
-        throw new Error("You are missing the strength.");
-      }
-      if (!Intern) {
-        throw new Error("You are missing the hitPoints.");
-      }
-      this.Manager = Manager;
-      this.Engineer = Engineer;
-      this.Intern = Intern;
+
 
 
 
@@ -54,7 +41,20 @@ inquirer
                 }
             }
         }
-       
+       // use switch case here
+  switch (path) {
+
+    case "/":
+      return displayRoot(res);
+  
+    case "/portfolio":
+      return displayPortfolio(res);
+  
+    default:
+      return display404(path, res);
+    }
+  }
+       }
         } 
     } 
     ])

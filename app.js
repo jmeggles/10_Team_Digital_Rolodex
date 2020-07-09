@@ -59,7 +59,7 @@ function createCard() {
           break;
 
         // if no more employees selected. 
-        case "No more employees";
+        case "No more employees":
           break
       }
     })
@@ -89,7 +89,7 @@ function createCard() {
           message: "Manager's office number?"
         }
       ]);
-
+    }
   // if engineer is selected...
   function engCard() {
     inquirer
@@ -115,7 +115,7 @@ function createCard() {
           message: "Engineer's github username?"
         }
     ]);
-
+  }
   // if intern is selected...
   function intCard() {
     inquirer
@@ -142,7 +142,8 @@ function createCard() {
         }
    
     ])
-
+  }
+}
 // module,exports = employees
 // createCard();
 
@@ -163,3 +164,4 @@ fs.writeFile(outputPath, HTML, (err) => {
 // `output` folder. You can use the variable `outputPath` above target this location.
 
 // for the provIded `render` function to work! ```
+  

@@ -4,7 +4,7 @@
   Team Profile Generator
 
   ## Overview 
-  A generator that promtps user for contact info inputs about team members then builds cards and outputs an html file with all the information.  It's a digital rolodex! 
+  A generator that promtps user to input contact information about team members then builds cards and outputs an html file with all the information.  It's a digital rolodex! 
 
   ## Table of Contents:
   - [Links](#Links)
@@ -51,3 +51,5 @@
   Yes. Commit or comment to the project in github.
 
   © Copyright 2020
+
+  [![OpenFaaS](https://img.shields.io/badge/openfaas-cloud-blue.svg)](https://www.openfaas.com)

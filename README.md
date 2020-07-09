@@ -52,4 +52,4 @@
 
   © Copyright 2020
 
-  [![OpenFaaS](https://img.shields.io/badge/openfaas-cloud-blue.svg)](https://www.openfaas.com)
+  [![OpenFaaS](https://img.shields.io/badge/Team Rolodex!-organize-blue.svg)]

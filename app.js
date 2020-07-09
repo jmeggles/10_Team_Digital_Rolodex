@@ -16,6 +16,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 // calls the info
 const render = require("./lib/htmlRenderer");
+const { create } = require("domain");
 // getting an array of all inputted employee information
 const employees = [];
 // send employee array to html output 
@@ -88,8 +89,17 @@ function createCard() {
           name: "mgrPhone",
           message: "Manager's office number?"
         }
-      ]);
-    .then
+      ])
+    // answers are written to the markdown file
+    .then(selection => {
+      console.log(selection);
+      // takes all inputs...
+      const manager = new Manager(selection.mgrName, selection.mgrId, secetion.mgrEmail, mgrPhone)
+      // pushes to 
+      employees.push(manager)
+
+      createCard();
+    })
     }
   // if engineer is selected...
   function engCard() {
@@ -115,7 +125,16 @@ function createCard() {
           name: "engGithub",
           message: "Engineer's github username?"
         }
-    ]);
+    ])
+    // answers are written to the markdown file
+    .then(selection => {
+      console.log(selection);
+      
+      const engineer = new Engineer(selection.engName, selection.engId, secetion.engEmail, engGithub)
+      employees.push(engineer)
+      
+      createCard();
+    })
   }
   // if intern is selected...
   function intCard() {
@@ -143,17 +162,22 @@ function createCard() {
         }
    
     ])
-    .then()
+    // answers are written to the markdown file
+    .then(selection =>  {
+      console.log(selection);
+      // takes inputs from here...
+      const intern = new Intern(selection.intName, selection.intId, secetion.intEmail, intSchool)
+      // pushes those inputs to the intern
+      employees.push(intern)
+      
+      createCard();
+    })
   }
 }
 // module,exports = employees
 createCard()
 
 // answers are written to the markdown file
-.then(answer => generateOutput(answer))
-.then(answer => generateOutput(answer)) //make one fore each card
-.then(answer => generateOutput(answer))
-.then(answer => generateOutput(answer))
 
 // writes the info to an output html page
 function generateOutput(data) {

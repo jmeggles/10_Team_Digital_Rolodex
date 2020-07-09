@@ -16,34 +16,32 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 // calls the info
 const render = require("./lib/htmlRenderer");
-const { create } = require("domain");
 // getting an array of all inputted employee information
 const employees = [];
-// send employee array to html output 
-const HTML = render(employees);
+
 
 // building the team with objects as classes/subclasses
+createCard()
 function createCard() {
-
   // list of choices for user to choose from.  
   inquirer
-    .prompt([
-      {
-        type: "list",
-        name: "title",
-        message: "Title of team member?",
-        choices: [
-          "Manager",
-          "Engineer",
-          "Intern",
-          "No more members."
-        ]
-      }
-    ])
-
+    .prompt({
+      type: "list",
+      name: "title",
+      message: "Title of team member?",
+      choices: [
+        "Manager",
+        "Engineer",
+        "Intern",
+        "No more employees"
+      ]
+    })
     // depending on which title is chosen, the next set of required info will be asked.
-    .then(selection => {
-      switch (selection.title) {
+    .then(({ title }) => {
+
+      // const { title } = selection;
+
+      switch (title) {
         // if manager is selected...or...
         case "Manager":
           mgrCard();
@@ -61,130 +59,132 @@ function createCard() {
 
         // if no more employees selected. 
         case "No more employees":
+          generateHTML()
           break
       }
     })
 
-  // if manager is selected... 
-  function mgrCard() {
-    inquirer
-      .prompt([
-        {
-          type: "input",
-          name: "mgrName",
-          message: "Manager's name?"
-        },
-        {
-          type: "input",
-          name: "mgrId",
-          message: "Manager's employee Id?"
-        },
-        {
-          type: "input",
-          name: "mgrEmail",
-          message: "Manager's email?"
-        },
-        {
-          type: "input",
-          name: "mgrPhone",
-          message: "Manager's office number?"
-        }
-      ])
+}
+// if manager is selected... 
+function mgrCard() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "mgrName",
+        message: "Manager's name?"
+      },
+      {
+        type: "input",
+        name: "mgrId",
+        message: "Manager's employee Id?"
+      },
+      {
+        type: "input",
+        name: "mgrEmail",
+        message: "Manager's email?"
+      },
+      {
+        type: "input",
+        name: "mgrPhone",
+        message: "Manager's office number?"
+      }
+    ])
     // answers are written to the markdown file
-    .then(selection => {
-      console.log("manager: " + selection);
+    .then(({ mgrName, mgrId, mgrEmail, mgrPhone }) => {
+      //console.log("manager: " + selection);
       // takes all inputs...
-      const manager = new Manager(selection.mgrName, selection.mgrId, secetion.mgrEmail, mgrPhone)
+      const manager = new Manager(mgrName, mgrId, mgrEmail, mgrPhone)
       // pushes to 
       employees.push(manager)
 
       createCard();
     })
-    }
-  // if engineer is selected...
-  function engCard() {
-    inquirer
-      .prompt([
-        {
-          type: "input",
-          name: "engName",
-          message: "Engineer's name?"
-        },
-        {
-          type: "input",
-          name: "engId",
-          message: "Enginner's employee Id?"
-        },
-        {
-          type: "input",
-          name: "engEmail",
-          message: "Engineer's email?"
-        },
-        {
-          type: "input",
-          name: "engGithub",
-          message: "Engineer's github username?"
-        }
+}
+// if engineer is selected...
+function engCard() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "engName",
+        message: "Engineer's name?"
+      },
+      {
+        type: "input",
+        name: "engId",
+        message: "Enginner's employee Id?"
+      },
+      {
+        type: "input",
+        name: "engEmail",
+        message: "Engineer's email?"
+      },
+      {
+        type: "input",
+        name: "engGithub",
+        message: "Engineer's github username?"
+      }
     ])
     // answers are written to the markdown file
     .then(selection => {
       console.log("engineer: " + selection);
-      
-      const engineer = new Engineer(selection.engName, selection.engId, secetion.engEmail, engGithub)
+      //  takes all the inputs
+      const engineer = new Engineer(selection.engName, selection.engId, selection.engEmail, selection.engGithub)
       employees.push(engineer)
-      
+
       createCard();
     })
-  }
-  // if intern is selected...
-  function intCard() {
-    inquirer
-      .prompt([
-        {
-          type: "input",
-          name: "intName",
-          message: "Intern's name?"
-        },
-        {
-          type: "input",
-          name: "intId",
-          message: "Intern's employee Id?"
-        },
-        {
-          type: "input",
-          name: "intEmail",
-          message: "Intern's email?"
-        },
-        {
-          type: "input",
-          name: "intSchool",
-          message: "Intern's school?"
-        }
-   
+}
+// if intern is selected...
+function intCard() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "intName",
+        message: "Intern's name?"
+      },
+      {
+        type: "input",
+        name: "intId",
+        message: "Intern's employee Id?"
+      },
+      {
+        type: "input",
+        name: "intEmail",
+        message: "Intern's email?"
+      },
+      {
+        type: "input",
+        name: "intSchool",
+        message: "Intern's school?"
+      }
+
     ])
     // answers are written to the markdown file
-    .then(selection =>  {
+    .then(selection => {
       console.log("intern: " + selection);
       // takes inputs from here...
-      const intern = new Intern(selection.intName, selection.intId, secetion.intEmail, intSchool)
-      // pushes those inputs to the intern
+      const intern = new Intern(selection.intName, selection.intId, selection.intEmail, selection.intSchool)
+
       employees.push(intern)
-      
+
       createCard();
     })
-  }
 }
-module.exports = employees 
 
-createCard()
-
-// answers are written to the markdown file
+function generateHTML() {
+  generateOutput(render(employees))
+}
 
 // writes the info to an output html page
 function generateOutput(data) {
-fs.writeFile(outputPath, HTML, (err) => {
-  console.log();
-});
+  console.log(data)
+  fs.writeFile(outputPath, data, (err) => {
+    if (err) throw err;
+    console.log("Successfully written to", outputPath);
+  });
 }
 // generate and return a block of HTML including templated divs for each employee!
     //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file
@@ -194,4 +194,4 @@ fs.writeFile(outputPath, HTML, (err) => {
 // `output` folder. You can use the variable `outputPath` above target this location.
 
 // for the provIded `render` function to work! ```
-  
+

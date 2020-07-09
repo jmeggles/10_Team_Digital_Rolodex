@@ -25,7 +25,7 @@ const HTML = render(employees);
 // writes the info to an output html page
 fs.writeFile(outputPath, HTML, (err) => {
   console.log("File generated");
-})
+});
 
 // building the team with objects as classes/subclasses
 function createCard() {
@@ -52,12 +52,21 @@ function createCard() {
         // if manager is selected...or...
         case "Manager":
           mgrCard();
+          break;
+
         // if engineer is selected...or...
         case "Engineer":
           engCard();
-        // if intern is selected.
+          break;
+
+        // if intern is selected...or...
         case "Intern":
           intCard();
+          break;
+
+        // if no more employees selected. 
+        case "No more employees";
+          
       }
     })
 

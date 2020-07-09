@@ -21,7 +21,7 @@
   - (https://github.com/jmeggles/10_Team_Profile_Generator)
 
  ## Screenshots_and_GIFs 
-  - ![](https://media.giphy.com/)
+  - ![](https://media.giphy.com/media/givH9vKcj4Vwz94XJX/giphy.gif)
   - <img src="./assets/images/screenshot1.png" width=600>
   - <img src="./assets/images/screenshot2.png" width=600>
 

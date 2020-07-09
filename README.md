@@ -1,5 +1,5 @@
 
-  # Project Name 
+  # Project Name [![Build Status](https://travis-ci.org/jmeggles/10_Team_Profile_Generator.svg?branch=master)](https://travis-ci.org/jmeggles/10_Team_Profile_Generator)
   <!-- ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=lightgrey) -->
   Team Profile Generator
 
@@ -45,7 +45,7 @@
   John Dinsmore, Jorge Alvarez, Ben Benson WebDev Tutoring, W3 Schools (https://www.w3schools.com/js/), Mozilla (https://developer.mozilla.org/en-US/).
 
   ## Tests
- This project passed all tests prior to building application. *See gif above* [Screenshots_and_GIFs](#Screenshots_and_GIFs)
+ This project passed all 17 tests prior to building application. *See gif above* [Screenshots_and_GIFs](#Screenshots_and_GIFs)
 
   ## Contribute
   Yes. Commit or comment to the project in github.

@@ -18,13 +18,15 @@
   - [Contribute](#Contribute)
 
  ## Links
-  - (https://jmeggles.github.io/10_Team_Profile_Generator/)
-  - (https://github.com/jmeggles/10_Team_Profile_Generator)
+  - (https://jmeggles.github.io/10_Team_Digital_Rolodex/)
+  - (https://github.com/jmeggles/10_Team_Digital_Rolodex)
 
  ## Screenshots_and_GIFs 
   - ![](https://media.giphy.com/media/givH9vKcj4Vwz94XJX/giphy.gif)
   - <img src="./assets/images/screenshot1.png" width=600>
   - <img src="./assets/images/screenshot2.png" width=600>
+  - <img src="./assets/images/screenshot3.png" width=600>
+  - <img src="./assets/images/screenshot4.png" width=600>
 
   ## Motivation
   This project is to organize personal info and to access contact info quickly.  It is best used when new members are added to a team so all the info can be quickly accessed when needed. 

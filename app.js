@@ -21,12 +21,6 @@ const employees = [];
 // send employee array to html output 
 const HTML = render(employees);
 
-
-// writes the info to an output html page
-fs.writeFile(outputPath, HTML, (err) => {
-  console.log("File generated");
-});
-
 // building the team with objects as classes/subclasses
 function createCard() {
 
@@ -65,7 +59,7 @@ function createCard() {
           break;
 
         // if no more employees selected. 
-        case "No more employees";
+        case "No more employees":
           break
       }
     })
@@ -95,7 +89,7 @@ function createCard() {
           message: "Manager's office number?"
         }
       ]);
-
+    }
   // if engineer is selected...
   function engCard() {
     inquirer
@@ -121,7 +115,7 @@ function createCard() {
           message: "Engineer's github username?"
         }
     ]);
-
+  }
   // if intern is selected...
   function intCard() {
     inquirer
@@ -146,21 +140,28 @@ function createCard() {
           name: "intSchool",
           message: "Intern's school?"
         }
-    ]);
+   
+    ])
+  }
+}
+// module,exports = employees
+// createCard();
 
+// answers are written to the markdown file
+.then(answer => generateOutput(answer))
 
+// writes the info to an output html page
+function generateOutput(data) {
+fs.writeFile(outputPath, HTML, (err) => {
+  console.log("File generated");
+});
+}
 // generate and return a block of HTML including templated divs for each employee!
     //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.
-// Hint: you may need to check if the `output` folder exists and create it if it
-// does not.
 
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
 // for the provIded `render` function to work! ```
+  

@@ -92,7 +92,7 @@ function createCard() {
       ])
     // answers are written to the markdown file
     .then(selection => {
-      console.log(selection);
+      console.log("manager: " + selection);
       // takes all inputs...
       const manager = new Manager(selection.mgrName, selection.mgrId, secetion.mgrEmail, mgrPhone)
       // pushes to 
@@ -128,7 +128,7 @@ function createCard() {
     ])
     // answers are written to the markdown file
     .then(selection => {
-      console.log(selection);
+      console.log("engineer: " + selection);
       
       const engineer = new Engineer(selection.engName, selection.engId, secetion.engEmail, engGithub)
       employees.push(engineer)
@@ -164,7 +164,7 @@ function createCard() {
     ])
     // answers are written to the markdown file
     .then(selection =>  {
-      console.log(selection);
+      console.log("intern: " + selection);
       // takes inputs from here...
       const intern = new Intern(selection.intName, selection.intId, secetion.intEmail, intSchool)
       // pushes those inputs to the intern
@@ -174,7 +174,8 @@ function createCard() {
     })
   }
 }
-// module,exports = employees
+module.exports = employees 
+
 createCard()
 
 // answers are written to the markdown file

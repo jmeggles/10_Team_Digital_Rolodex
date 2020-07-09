@@ -1,5 +1,6 @@
 
-  # Project Name ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=lightgrey)
+  # Project Name 
+  <!-- ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=lightgrey) -->
   Team Profile Generator
 
   ## Overview 

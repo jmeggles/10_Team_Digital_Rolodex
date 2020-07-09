@@ -164,7 +164,7 @@ function intCard() {
       createCard();
     })
 }
-
+// puts all the info into html; view on server
 function generateHTML() {
   generateOutput(render(employees))
 }

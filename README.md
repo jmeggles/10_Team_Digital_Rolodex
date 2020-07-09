@@ -1,7 +1,7 @@
 
-  # Project Name [![Build Status](https://travis-ci.org/jmeggles/10_Team_Profile_Generator.svg?branch=master)](https://travis-ci.org/jmeggles/10_Team_Profile_Generator)
+  # Project Name [![Build Status](https://travis-ci.org/jmeggles/10_Team_Digital_Rolodex.svg?branch=master)](https://travis-ci.org/jmeggles/10_Team_Digital_Rolodex)
   <!-- ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=lightgrey) -->
-  Team Profile Generator
+  Team Digital Rolodex
 
   ## Overview 
   A generator that promtps user to input contact information about team members then builds cards and outputs an html file with all the information.  It's a digital rolodex! 
@@ -35,7 +35,7 @@
   Use npm inquirer package.
 
   ## How_to_use
-  After installing npm pkg, from terminal, run node and app.js to generate the prompts. Answer all prompts and after all cards are completed, an output folder will process an html file with all the info in a card style framework.  
+  After installing npm pkg, from terminal, run node app.js to generate the prompts. Answer all prompts and after all cards are completed, an output folder will process an html file that can be viewed on a server with all the info in a card style framework.  
 
   ## Benefit
   Anyone!  This will benefit managers, team leaders, or anyone who needs to keep contact information on file. 

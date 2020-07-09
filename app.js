@@ -4,9 +4,9 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 // pulls info from Intern.js file
 const Intern = require("./lib/Intern");
-// npm pkg
+// npm pkg inquirer to run tests
 const inquirer = require("inquirer");
-// follows 
+// follows required path
 const path = require("path");
 // file system to pull info for writing on page
 const fs = require("fs");
@@ -18,7 +18,6 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 // getting an array of all inputted employee information
 const employees = [];
-
 
 // building the team with objects as classes/subclasses
 createCard()
@@ -38,8 +37,6 @@ function createCard() {
     })
     // depending on which title is chosen, the next set of required info will be asked.
     .then(({ title }) => {
-
-      // const { title } = selection;
 
       switch (title) {
         // if manager is selected...or...
@@ -63,7 +60,6 @@ function createCard() {
           break
       }
     })
-
 }
 // if manager is selected... 
 function mgrCard() {
@@ -186,12 +182,3 @@ function generateOutput(data) {
     console.log("Successfully written to", outputPath);
   });
 }
-// generate and return a block of HTML including templated divs for each employee!
-    //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file
-
-// After you have your html, you're now ready to create an HTML file using the HTML
-// returned from the `render` function. Now write it to a file named `team.html` in the
-// `output` folder. You can use the variable `outputPath` above target this location.
-
-// for the provIded `render` function to work! ```
-

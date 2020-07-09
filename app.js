@@ -10,6 +10,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 // file system to pull info for writing on page
 const fs = require("fs");
+// path for html output that will be written
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 //  team.html will be insIde output folder
 const outputPath = path.join(OUTPUT_DIR, "team.html");
@@ -147,11 +148,7 @@ function createCard() {
 // `output` folder. You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
-    //  
 
-// HINT: each employee type (manager, engineer, or intern) has slightly different
-// information; write your code to ask different questions via inquirer depending on
-// employee type.
 
 // HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
 // and Intern classes should all extend from a class named Employee; see the directions

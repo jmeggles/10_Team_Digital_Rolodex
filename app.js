@@ -89,6 +89,7 @@ function createCard() {
           message: "Manager's office number?"
         }
       ]);
+    .then
     }
   // if engineer is selected...
   function engCard() {
@@ -142,6 +143,7 @@ function createCard() {
         }
    
     ])
+    .then()
   }
 }
 // module,exports = employees
@@ -149,11 +151,14 @@ createCard()
 
 // answers are written to the markdown file
 .then(answer => generateOutput(answer))
+.then(answer => generateOutput(answer)) //make one fore each card
+.then(answer => generateOutput(answer))
+.then(answer => generateOutput(answer))
 
 // writes the info to an output html page
 function generateOutput(data) {
 fs.writeFile(outputPath, HTML, (err) => {
-  console.log("File generated");
+  console.log();
 });
 }
 // generate and return a block of HTML including templated divs for each employee!

@@ -145,7 +145,7 @@ function createCard() {
   }
 }
 // module,exports = employees
-// createCard();
+createCard()
 
 // answers are written to the markdown file
 .then(answer => generateOutput(answer))

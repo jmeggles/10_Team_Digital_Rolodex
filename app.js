@@ -120,7 +120,7 @@ function createCard() {
           name: "engGithub",
           message: "Engineer's github username?"
         }
-    ])
+    ]);
 
   // if intern is selected...
   function intCard() {
@@ -146,7 +146,7 @@ function createCard() {
           name: "intSchool",
           message: "Intern's school?"
         }
-    ])
+    ]);
 
 
 // generate and return a block of HTML including templated divs for each employee!

@@ -27,7 +27,7 @@
   - <img src="./assets/images/screenshot2.png" width=600>
 
   ## Motivation
-  This project is to organize personal info and to access contact info quickly.  It is best used when new members are added to a team so all the info can be quickly accessed when needed.
+  This project is to organize personal info and to access contact info quickly.  It is best used when new members are added to a team so all the info can be quickly accessed when needed. 
 
   ## Installation ![npm](https://img.shields.io/npm/v/npm?color=pink&style=plastic) ![npm](https://img.shields.io/npm/v/inquirer?color=pink&label=inquirer&style=plastic)
   Use npm inquirer package.

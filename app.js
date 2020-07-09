@@ -88,11 +88,9 @@ function mgrCard() {
     ])
     // answers are written to the markdown file
     .then(({ mgrName, mgrId, mgrEmail, mgrPhone }) => {
-      //console.log("manager: " + selection);
-      // takes all inputs...
-      const manager = new Manager(mgrName, mgrId, mgrEmail, mgrPhone)
-      // pushes to 
-      employees.push(manager)
+      // collects all inputs
+      const manager = new Manager(mgrName, mgrId, mgrEmail, mgrPhone);
+      employees.push(manager);
 
       createCard();
     })
@@ -123,11 +121,10 @@ function engCard() {
       }
     ])
     // answers are written to the markdown file
-    .then(selection => {
-      console.log("engineer: " + selection);
-      //  takes all the inputs
-      const engineer = new Engineer(selection.engName, selection.engId, selection.engEmail, selection.engGithub)
-      employees.push(engineer)
+    .then(({ engName, engId, engEmail, engGithub }) => {
+      //  collects all the inputs
+      const engineer = new Engineer(engName, engId, engEmail, engGithub);
+      employees.push(engineer);
 
       createCard();
     })
@@ -159,12 +156,10 @@ function intCard() {
 
     ])
     // answers are written to the markdown file
-    .then(selection => {
-      console.log("intern: " + selection);
+    .then(({intName, intId, intEmail, intSchool}) => {
       // takes inputs from here...
-      const intern = new Intern(selection.intName, selection.intId, selection.intEmail, selection.intSchool)
-
-      employees.push(intern)
+      const intern = new Intern(intName, intId, intEmail, intSchool);
+      employees.push(intern);
 
       createCard();
     })

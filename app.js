@@ -66,7 +66,7 @@ function createCard() {
 
         // if no more employees selected. 
         case "No more employees";
-          
+          break
       }
     })
 
@@ -94,7 +94,7 @@ function createCard() {
           name: "mgrPhone",
           message: "Manager's office number?"
         }
-      ])
+      ]);
 
   // if engineer is selected...
   function engCard() {

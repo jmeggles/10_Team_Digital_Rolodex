@@ -9,8 +9,12 @@
     text-align: center;
 }
 
-.card-title {
+h3 {
     font-style: italic;
+}
+
+#man-card, #engi-card, #inter-card {
+    margin-right: 2%
 }
 
 .card {

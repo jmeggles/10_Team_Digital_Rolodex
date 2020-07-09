@@ -146,8 +146,12 @@ function createCard() {
           name: "intSchool",
           message: "Intern's school?"
         }
+        createCard();
     ]);
 
+module,exports = employees
+
+createCard();
 
 // generate and return a block of HTML including templated divs for each employee!
     //  push object into array after enigineer, manager, intern then generate and return block of html that will write to a file

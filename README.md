@@ -45,7 +45,7 @@
   John Dinsmore, Jorge Alvarez, Ben Benson WebDev Tutoring, W3 Schools (https://www.w3schools.com/js/), Mozilla (https://developer.mozilla.org/en-US/).
 
   ## Tests
- This project passed all tests prior to building application. *See gif above*
+ This project passed all tests prior to building application. *See gif above* [Screenshots_and_GIFs](#Screenshots_and_GIFs)
 
   ## Contribute
   Yes. Commit or comment to the project in github.

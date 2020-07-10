@@ -1,6 +1,6 @@
 
   # Project Name [![Build Status](https://travis-ci.org/jmeggles/10_Team_Digital_Rolodex.svg?branch=master)](https://travis-ci.org/jmeggles/10_Team_Digital_Rolodex)
-  <!-- ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=lightgrey) -->
+  ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=lightgrey)
   Team Digital Rolodex
 
   ## Overview 
@@ -23,11 +23,10 @@
 
  ## Screenshots_and_GIFs 
   - ![](https://media.giphy.com/media/givH9vKcj4Vwz94XJX/giphy.gif)
-  - <img src="./assets/images/screenshot1.png" width=600>
-  - <img src="./assets/images/screenshot2.png" width=600>
-  - <img src="./assets/images/screenshot3.png" width=600>
-  - <img src="./assets/images/screenshot4.png" width=600>
-
+  - ![Screenshot of deployed rolodex project completed html on server](./assets/images/screenshot1.png)
+  - ![Screenshot of deployed rolodex project running node viewing manager card info](./assets/images/screenshot2.png)
+  - ![Screenshot of deployed rolodex project running node viewing engineer card info](./assets/images/screenshot3.png)
+  
   ## Motivation
   This project is to organize personal info and to access contact info quickly.  It is best used when new members are added to a team so all the info can be quickly accessed when needed. 
 

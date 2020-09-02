@@ -1,5 +1,5 @@
 
-  # Project Name [![Build Status](https://travis-ci.org/jmeggles/10_Team_Digital_Rolodex.svg?branch=master)](https://travis-ci.org/jmeggles/10_Team_Digital_Rolodex) ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=pink)
+  # Project Name  ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=green)
   Team Digital Rolodex
 
   ## Overview 

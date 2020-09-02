@@ -17,8 +17,8 @@
   - [Contribute](#Contribute)
 
  ## Links
-  - (https://jmeggles.github.io/10_Team_Digital_Rolodex/)
-  - (https://github.com/jmeggles/10_Team_Digital_Rolodex)
+  - (https://jmeggles.github.io/Team_Digital_Rolodex/)
+  - (https://github.com/jmeggles/Team_Digital_Rolodex)
 
  ## Screenshots_and_GIFs 
   - ![](https://media.giphy.com/media/givH9vKcj4Vwz94XJX/giphy.gif)

@@ -1,6 +1,5 @@
 
-  # Project Name  ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=green)
-  Team Digital Rolodex
+  # Digital Rolodex  ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=green)
 
   ## Overview 
   A generator that promtps user to input contact information about team members then builds cards and outputs an html file with all the information.  It's a digital rolodex! 
@@ -14,11 +13,11 @@
   - [Benefit](#Benefit)
   - [License](#License)
   - [Tests](#Tests)
-  - [Contribute](#Contribute)
+  - [Contact](#Contact)
 
  ## Links
-  - (https://jmeggles.github.io/Team_Digital_Rolodex/)
-  - (https://github.com/jmeggles/Team_Digital_Rolodex)
+  - (https://jmeggles.github.io/Digital_Rolodex/)
+  - (https://github.com/jmeggles/Digital_Rolodex)
 
  ## Screenshots_and_GIFs 
   - ![](https://media.giphy.com/media/givH9vKcj4Vwz94XJX/giphy.gif)
@@ -33,7 +32,7 @@
   Use npm inquirer package.
 
   ## How_to_use
-  After installing npm pkg, from terminal, run node app.js to generate the prompts. Answer all prompts and after all cards are completed, an output folder will process an html file that can be viewed on a server with all the info in a card style framework.  
+  Clone repo, <code>npm i</code>, run node app.js to generate the prompts. Answer all prompts and after all cards are completed, an output folder will process an html file that can be viewed on a server with all the info in a card style framework.  
 
   ## Benefit
   Anyone!  This will benefit managers, team leaders, or anyone who needs to keep contact information on file. 
@@ -41,14 +40,13 @@
   ## License ![APM](https://img.shields.io/apm/l/npm?color=pink&style=plastic)
   MIT
 
-  ## Credits
-  John Dinsmore, Jorge Alvarez, Ben Benson WebDev Tutoring, W3 Schools (https://www.w3schools.com/js/), Mozilla (https://developer.mozilla.org/en-US/).
-
   ## Tests
  This project passed all 17 tests prior to building application. *See gif above* [Screenshots_and_GIFs](#Screenshots_and_GIFs)
 
-  ## Contribute
-  Yes. Commit or comment to the project in github.
+  ## Contact
+  For comments and/or questions, contact Jody Eggleston via
+  [Linkedin](https://www.linkedin.com/in/jody-eggleston/).
+
 
   © Copyright 2020
 

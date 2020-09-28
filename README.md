@@ -5,7 +5,6 @@
   A generator that promtps user to input contact information about team members then builds cards and outputs an html file with all the information.  It's a digital rolodex! 
 
   ## Table of Contents:
-  - [Links](#Links)
   - [Screenshots_and_GIFs](#Screenshots_and_GIFs)
   - [Motivation](#Motivation)
   - [Installation](#Installation)
@@ -15,9 +14,6 @@
   - [Tests](#Tests)
   - [Contact](#Contact)
 
- ## Links
-  - (https://jmeggles.github.io/Digital_Rolodex/)
-  - (https://github.com/jmeggles/Digital_Rolodex)
 
  ## Screenshots_and_GIFs 
   - ![](https://media.giphy.com/media/givH9vKcj4Vwz94XJX/giphy.gif)
